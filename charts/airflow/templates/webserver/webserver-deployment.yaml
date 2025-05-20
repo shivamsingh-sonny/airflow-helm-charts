@@ -122,7 +122,7 @@ spec:
           args:
             - "bash"
             - "-c"
-            - "exec airflow webserver"
+            - "exec airflow api-server"
           {{- if .Values.web.livenessProbe.enabled }}
           livenessProbe:
             initialDelaySeconds: {{ .Values.web.livenessProbe.initialDelaySeconds }}
